@@ -31,5 +31,3 @@ test_df = pd.DataFrame(test_data)
 X_test = vectorizer.transform(test_df['ingredients'])
 test_df['cuisine'] = model.predict(X_test)
 test_df[['id', 'cuisine']].to_csv('final_test_predictions.csv', index=False)
-
-print("Previsões salvas no arquivo 'final_test_predictions.csv'")
